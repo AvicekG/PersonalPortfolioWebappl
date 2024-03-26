@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website</title>
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  
+ 
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <a href="#" class="logo"><span class="Port">Port</span><span class="Folio">Folio</span></a>
+ 
+        <div class="bx bx-menu" id="menu-icon"></div>
+ 
+        <ul class="navbar">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Resume">Resume</a></li>
+            
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <div class="bx bx-moon" id="darkmode"></div>
+        </ul>
+    </header>
+    <!-- Home -->
+ 
+    <section class="home" id="home">
+        <div class="social">
+          <a href="#" onclick="toggleQR()">
+            <i class='bx bxl-github'></i>
+        </a>
+        
+        <!-- QR code container -->
+        <div id="qrContainer" class="qr-container">
+           
+          <img id="qrImage" class="small" src="/static/images/QR.png" alt="QR Code">
+        </div>
+            <a href="#"><i class='bx bxl-behance' ></i></a>
+        </div>
+        <div class="home-img">
+            <div class="swiper-container home-slider">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="{{ url_for('static', filename='images/u.jpg.jpg') }}" alt=""></div>
+
+        <div class="swiper-slide"><img src="12.png" alt=""></div>
+        <!-- Add more slides as needed -->
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+        </div>
+        <div class="home-text">
+            <span>Hello, I'm</span>
+            <h1>Avicek Guragain</h1>
+            <h2>Frontend Developer</h2>
+            <p> dedicated to crafting captivating digital experiences <br> user-friendly digital experiences <br> </p>
+            <a href="#contact" class="btn">Contact Me</a>
+        </div>
+ 
+    </section><!-- About -->
+    <section class="about" id="about">
+        <div class="heading">
+            <h2>About Me</h2>
+            <span>Introduction</span>
+        </div>
+        <!-- About Content -->
+        <div class="about-container">
+            <div class="about-img">
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='images/aab.jpg') }}" alt=""></div>
+            </div>
+            <div class="about-text">
+                <p>I'm Avicek Guragain, a passionate front-end developer based in Dharan. With a keen eye for detail and a love for problem-solving, I specialize in creating beautiful and functional websites that leave a lasting impression. My journey in web development began with a curiosity to explore the intersection of design and technology, and it has since evolved into a fulfilling career.</p>
+                <div class="information">
+                    <!-- Box 1 -->
+                    <div class="info-box">
+                        <i class='bx bxs-user'></i>
+                        <span>Avicek Guragain</span>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="info-box">
+                        <i class='bx bxs-phone'></i>
+                        <span>+9779827042374</span>
+                    </div>
+                    <!-- Box 3 -->
+                    <div class="info-box">
+                        <i class='bx bxs-envelope'></i>
+                        <span>guragainavicek@gmai.com</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <section class="skills" id="skills" style="display: none;">
+            <!-- Content will be dynamically added here -->
+        </section>
+        <section class="experience" id="experience" style="display: none;">
+            <!-- Content will be dynamically added here -->
+        </section>
+        <div>
+            <div class="bottom-buttons">
+            <button id="showSkills">Show Skills</button>
+    
+            <button id="showExperience">Show Experience</button>
+        </div>
+    
+
+    </section>
+    
+                
+                
+        </div>
+    </section>
+    <!-- Skills -->
+    <section class="Resume" id="Resume">
+        
+        <div class="container">
+          <div class="header">
+            <div class="full-name">
+              <span class="first-name">Avicek</span> 
+              <span class="last-name">Guragain</span>
+            </div>
+            <div class="contact-info">
+              <span class="email">Email: </span>
+              <span class="email-val">guragainavishek@gmail.com</span>
+              <span class="separator"></span>
+              <span class="phone">Phone: </span>
+              <span class="phone-val">9827042374</span>
+            </div>
+            
+            <div class="about">
+              <span class="position">Front-End Developer </span>
+              <span class="desc">
+                I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. 
+              </span>
+            </div>
+          </div>
+           <div class="details">
+            <div class="section">
+              <div class="section__title"></div>
+              <div class="section__list">
+                <div class="section__list-item">
+                  <div class="left">
+                    
+                  </div>
+                </div>
+        
+              </div>
+            </div>
+            <div class="section">
+              <div class="section__title">Education</div>
+              <div class="section__list">
+                <div class="section__list-item">
+                  <div class="left">
+                    <div class="name">Nobel Academy</div>
+                    <div class="addr">Kathmandu, Nepal</div>
+                    <div class="duration">Jan 2020 - Jun 2022</div>
+                  </div>
+                  <div class="right">
+                    <div class="name">Computer Science(NEB)</div>
+                    <div class="desc">did This and that</div>
+                  </div>
+                </div>
+                <div class="section__list-item">
+                  <div class="left">
+                    <div class="name">Texas College of Management and IT</div>
+                    <div class="addr">Kathmandu, Nepal</div>
+                    <div class="duration">Dec 2022 - Running</div>
+                  </div>
+                  <div class="right">
+                    <div class="name">Fr developer</div>
+                    <div class="desc">did This and that</div>
+                  </div>
+                </div>
+        
+              </div>
+              
+          </div>
+             <div class="section">
+              <div class="section__title">Projects</div> 
+               <div class="section__list">
+                 <div class="section__list-item">
+                   <div class="name">DSP</div>
+                   <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow.</div>
+                 </div>
+                 
+                 <div class="section__list-item">
+                            <div class="name">DSP</div>
+                   <div class="text">I am a front-end developer with more than 3 years of experience writing html, css, and js. I'm motivated, result-focused and seeking a successful team-oriented company with opportunity to grow. <a href="/login">link</a>
+                   </div>
+                 </div>
+               </div>
+            </div>
+             <div class="section">
+               <div class="section__title"></div>
+               <div class="skills">
+                 <div class="skills__item">
+                   
+                   </div>
+                 </div>
+                 
+               </div>
+               <div class="skills__item">
+                   
+             <div class="section">
+             <div class="section__title">
+               Interests
+               </div>
+               <div class="section__list">
+                 <div class="section__list-item">
+                          Football, programming.
+                  </div>
+               </div>
+             </div>
+             </div>
+          </div>
+        </div>
+        <div class="heading">
+            <h2>Skills</h2>
+            <span>My Skills</span>
+        </div>
+        
+        <!-- Skills Content -->
+        <div class="skills-container">
+            <div class="bars">
+                
+                <!-- Box 1 -->
+                <div class="bars-box">
+                    <h3>HTML</h3>
+                    <span>94%</span>
+                    <div class="light-bar"></div>
+                    <div class="percent-bar html-bar"></div>
+                </div>
+                <!-- Box 2 -->
+                <div class="bars-box">
+                    <h3>CSS</h3>
+                    <span>84%</span>
+                    <div class="light-bar"></div>
+                    <div class="percent-bar css-bar"></div>
+                </div>
+                <!-- Box 3 -->
+                <div class="bars-box">
+                    <h3>JavaScript</h3>
+                    <span>74%</span>
+                    <div class="light-bar"></div>
+                    <div class="percent-bar js-bar"></div>
+                </div>
+                <!-- Box 4 -->
+                <div class="bars-box">
+                    <h3>Python</h3>
+                    <span>70%</span>
+                    <div class="light-bar"></div>
+                    <div class="percent-bar react-bar"></div>
+                    
+                </div>
+            </div>
+            
+            <div class="skills-img">
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='images/123.png') }}" alt=""></div>
+               
+            </div>
+        </div>
+        <div>
+            <title>Add Work Experience and Skills</title>
+        </head>
+        
+            <div class="forms-container">
+                <div class="left-form">
+                <div class="add">
+                <h1 >Add Work Experience</h1>
+                </div>
+            <form id="experienceForm" action="/add_experience" method="POST" class="clearfix">
+                <label for="job_title">Job Title:</label>
+                <input type="text" id="job_title" name="job_title" required><br><br>
+                
+                <label for="company_name">Company Name:</label>
+                <input type="text" id="company_name" name="company_name" required><br><br>
+                
+                <label for="dates_employment">Dates of Employment:</label>
+                <input type="text" id="dates_employment" name="dates_employment" required><br><br>
+                
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required><br><br>
+                
+                <label for="responsibilities">Responsibilities:</label><br>
+                <input type="text" id="responsibilities" name="responsibilities" required><br><br>
+                
+                <button type="submit" class="submit-btn">Submit</button> 
+            </form>
+            </div>
+
+        
+           <div class="right-form">
+           <div class="add">
+             <h1 >Add Skills</h1>
+           </div>
+            <form id="skillsForm" action="/add_skills" method="POST" class="clearfix">
+                <label for="technical_skills">Technical Skills:</label>
+                <input type="text" id="technical_skills" name="technical_skills" required><br><br>
+                
+                <label for="soft_skills">Soft Skills:</label>
+                <input type="text" id="soft_skills" name="soft_skills" required><br><br>
+                
+                <label for="language_proficiency">Language Proficiency:</label>
+                <input type="text" id="language_proficiency" name="language_proficiency" required><br><br>
+                
+                <label for="certifications">Certifications:</label>
+                <input type="text" id="certifications" name="certifications" required><br><br>
+                
+                <label for="creative_skills">Creative Skills:</label>
+                <input type="text" id="creative_skills" name="creative_skills" required><br><br>
+                
+                <button type="submit" class="submit-btn">Submit</button> 
+            </form>
+        </div>
+    
+        
+            <div id="skillsList">
+                <!-- Skills and experience will be displayed here -->
+            </div>
+        </div>
+ 
+    </section>
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="heading">
+            <h2>Services</h2>
+            <span>Our Services</span>
+        </div>
+        <div class="services-content">
+            <!-- Box 1 -->
+            <div class="services-box">
+                <i class='bx bx-code-alt' ></i>
+                <h3>Web Development</h3>
+                <a href="#">Learn More</a>
+            </div>
+            <!-- Box 2 -->
+            <div class="services-box">
+                <i class='bx bx-server' ></i>
+                <h3>Backend Development</h3>
+                <a href="#">Learn More</a>
+            </div>
+            <!-- Box 3 -->
+            <div class="services-box">
+                <i class='bx bx-brush' ></i>
+                <h3>UI/UX Design</h3>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="services-box">
+                <i class='bx bxl-wordpress' ></i>
+                <h3>Wordpress Developer</h3>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+        <div class="heading">
+            <h2>Portfolio</h2>
+            <span>Our Recent Work</span>
+        </div>
+        <div class="portfolio-content">
+            <div class="portfolio-img">
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='images/blog-2.jpg') }}" alt=""></div>
+               
+            </div>
+            <div class="portfolio-img">
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='images/blog-3.jpg') }}" alt=""></div>
+            </div>
+            <div class="portfolio-img">
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='images/blog-4.jpg') }}" alt=""></div>
+            </div>
+            <div class="portfolio-img">
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='images/blog-5.jpg') }}" alt=""></div>
+            </div>
+            <div class="portfolio-img">
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='images/blog-6.jpg') }}" alt=""></div>
+                
+            </div> 
+            <div class="portfolio-img">
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='images/blog-7.jpg') }}" alt=""></div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="heading">
+            <h2>Contact</h2>
+            <span>Connect With Us</span>
+        </div>
+        <div class="contact-form">
+            <form action="">
+                <input type="text" placeholder="Your Name">
+                <input type="email" name="" id="" placeholder="Your Email">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Write Message Here..."></textarea>
+                <input type="button" value="Send" class="contact-button">
+            </form>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social-icon">
+          <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/avishek.guragain.7">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="#">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="https://www.linkedin.com/in/avicek-guragain-4aa211281/">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a></li>
+          <li class="social-icon__item"><a class="social-icon__link" href="https://www.facebook.com/avishek.guragain.7">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+        </ul>
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="http://127.0.0.1:5000/#home">Home</a></li>
+          <li class="menu__item"><a class="menu__link" href="http://127.0.0.1:5000/#about">About</a></li>
+          <li class="menu__item"><a class="menu__link" href="http://127.0.0.1:5000/#portfolio">Portfolio</a></li>
+          <li class="menu__item"><a class="menu__link" href="http://127.0.0.1:5000/#Resume">Resume</a></li>
+          <li class="menu__item"><a class="menu__link" href="http://127.0.0.1:5000/#contact">Contact</a></li>
+    
+        </ul>
+        <p>&copy;2024 Avicek Guragain| All Rights Reserved</p>
+    </footer>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <!-- Link To JS -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>   
+</body>
+</html>
